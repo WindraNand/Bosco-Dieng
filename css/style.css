@@ -20,7 +20,7 @@ html {
 
 body {
   font-family: "Poppins", sans-serif;
-  background-color: rgb(31, 107, 84);
+  background-color: rgb(174, 185, 184);
   color: white;
 }
 
@@ -90,11 +90,23 @@ body {
 
 /* Hero section */
 
-.hero {
+.hero,
+.hero-cottage {
   min-height: 100vh;
   display: flex;
   align-items: center;
   background-image: url("../img/headernya.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero-cottage {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url("../PHOTO\ HOMESTAY/cottage\ mez/ctm1_copy.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -115,12 +127,14 @@ body {
   );
 }
 
-.hero .content {
+.hero .content,
+.hero-cottage .content {
   padding: 1.4rem 7%;
   max-width: 60rem;
 }
 
-.hero .content h1 {
+.hero .content h1,
+.hero-cottage .content h1 {
   font-size: 5em;
   color: white;
   text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
@@ -131,7 +145,8 @@ body {
   color: var(--primary);
 }
 
-.hero .content p {
+.hero .content p,
+.hero-cottage .content p {
   font-size: 1.6rem;
   margin-top: 1rem;
   line-height: 1.4;
@@ -140,7 +155,8 @@ body {
   mix-blend-mode: difference;
 }
 
-.hero .content .cta {
+.hero .content .cta,
+.hero-cottage .content .cta {
   margin-top: 1rem;
   display: inline-block;
   padding: 1rem 3rem;
@@ -156,13 +172,16 @@ body {
 
 .about,
 .tipe-homestay,
-.contact {
+.contact,
+.description,
+.facility {
   padding: 10rem 7% 1.4rem;
 }
 
 .about h2,
 .tipe-homestay h2,
-.contact h2 {
+.contact h2,
+.facility h2 {
   text-align: center;
   font-size: 2.6rem;
   margin-bottom: 3rem;
@@ -176,7 +195,7 @@ body {
   flex: 1 1 45rem;
 }
 
-.about .row .about-img img {
+.about .row .about-img img{
   width: 90%;
   border-radius: 10px;
 }
@@ -191,7 +210,9 @@ body {
   margin-bottom: 1rem;
 }
 
-.about .row .content p {
+.about .row .content p,
+.tipe-homestay p,
+.description p {
   margin-bottom: 0.8rem;
   font-size: 1.4rem;
   font-weight: 300;
@@ -209,8 +230,9 @@ body {
   text-align: center;
   max-width: 30rem;
   margin: auto;
-  font-weight: 100;
+  font-weight: 200;
   line-height: 1.6;
+  font-size: 1.5rem;
 }
 
 .tipe-homestay .row {
@@ -232,6 +254,38 @@ body {
 
 .tipe-homestay .row .tipe-card .tipe-card-title {
   margin-top: 1rem auto 0.5rem;
+}
+
+.tipe-homestay .row .tipe-card .tipe-card-price {
+font-size: 1.5rem;
+font-weight: 200;
+
+}
+
+/* Facility section */
+
+.facility .icon-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  width: 100%;
+  padding: 0 2rem;
+  box-sizing: border-box;
+}
+
+.facility .icon-title {
+  display: inline-flex;
+  align-items: center;
+}
+
+.facility ion-icon {
+  font-size: 4rem;
+  margin-right: 0.5rem;
+}
+
+.facility span {
+  font-size: 1.5rem;
+  font-weight: 200;
 }
 
 /* Contact Section */
@@ -279,6 +333,26 @@ body {
   color: white;
   background-color: var(--primary);
   cursor: pointer;
+}
+
+/* Description Section */
+
+.description .description-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.description .description-container img {
+  margin-right: 2.5rem;
+  margin-bottom: 2rem;
+  width: 20rem;
+  height: auto;
+  border-radius: 1rem;
+}
+
+.description .description-container p {
+  flex: 1 1 45rem;
 }
 
 /* Footer */
@@ -375,18 +449,30 @@ footer .credit a {
     flex-wrap: wrap;
   }
 
-  .about .row .about-img img {
+  .about .row .about-img img,
+  .description .description-img img {
     height: 24rem;
     object-fit: cover;
     object-position: bottom;
+    justify-content: center;
   }
 
   .about .row .content {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
+  }
+
+  .description .description-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .description .description-container img {
+    margin-right: 0;
+    margin-bottom: 1.2rem;
   }
 
   .tipe-homestay p {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
   }
 
   .contact .row {
@@ -405,6 +491,6 @@ footer .credit a {
 /* Handphone */
 @media (max-width: 450px) {
   html {
-    font-size: 55%;
+    font-size: 65%;
   }
 }
