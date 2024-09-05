@@ -224,7 +224,7 @@ body {
   flex: 1 1 45rem;
 }
 
-.about .row .about-img img{
+.about .row .about-img img {
   width: 90%;
   border-radius: 10px;
 }
@@ -286,9 +286,8 @@ body {
 }
 
 .tipe-homestay .row .tipe-card .tipe-card-price {
-font-size: 1.5rem;
-font-weight: 200;
-
+  font-size: 1.5rem;
+  font-weight: 200;
 }
 
 /* Facility section */
